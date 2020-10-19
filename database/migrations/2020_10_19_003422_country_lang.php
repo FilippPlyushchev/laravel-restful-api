@@ -15,9 +15,9 @@ class CountryLang extends Migration
     {
         Schema::create('country_lang', function (Blueprint $table) {
             $table->id();
-            $table->string('alias');
-            $table->string('name');
-            $table->string('name_en');
+            $table->string('alias')->nullable();
+            $table->string('name')->nullable();
+            $table->string('name_en')->nullable();
             $table->timestamps();
         });
     }
