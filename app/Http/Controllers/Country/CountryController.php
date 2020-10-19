@@ -15,4 +15,14 @@ class CountryController extends Controller
     public function countryById($id) {
         return response()->json(Country::find($id), 200);
     }
+
+    public function countrySave(Request $request) {
+        $country = Country::create($request->all());
+        return response()->json($country, 201);
+    }
+
+    public function countryEdit(Request $request, Country $country) {
+        $country->update($request->all());
+        return response()->json($country, 200);
+    }
 }
