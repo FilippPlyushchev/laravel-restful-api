@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Country\CountryController;
+use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Country\CountryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,5 @@ Route::get('country/{id}', [CountryController::class, 'countryById']);
 Route::post('country', [CountryController::class, 'countrySave']);
 Route::put('country/{id}', [CountryController::class, 'countryEdit']);
 Route::delete('country/{id}', [CountryController::class, 'countryDestroy']);
+
+Route::post('login', [LoginController::class, 'login']);
