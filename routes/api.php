@@ -24,3 +24,4 @@ Route::get('country/{id}', [CountryController::class, 'countryById']);
 
 Route::post('country', [CountryController::class, 'countrySave']);
 Route::put('country/{country}', [CountryController::class, 'countryEdit']);
+Route::delete('country/{country}', [CountryController::class, 'countryDestroy']);
